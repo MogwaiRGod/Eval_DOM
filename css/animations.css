@@ -1,0 +1,32 @@
+@keyframes survol {
+    /* Pour que l'objet s'agrandisse au survol de manière fluide */
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(var(--grow-hover));
+    } 
+}
+
+@keyframes survol2 {
+    /* animation pour faire revenir l'élément à sa taille initiale (via un calcul)
+    problème : je crois qu'elle se déclenche quand la souris n'est PAS sur l'élément, pas quand elle vient de le quitte =>
+    l'objet est perpetuellement plus petit que prévu... */
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(calc(1 / var(--grow-hover)));
+    } 
+}
+
+@keyframes apparition {
+    /* fait apparaître l'objet en fondu 
+    Je crois que cette animation ne fonctionne qu'une fois, et je ne sais pas pourquoi ??? */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    } 
+}

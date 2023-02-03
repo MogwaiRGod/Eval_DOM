@@ -1,0 +1,64 @@
+        /*  OBJETS RECURRENTS    */
+
+/* champ input */
+input {
+    font-family: var(--font);
+    background: var(--dark3);
+    border : solid 2px var(--dark);
+    color: var(--blanc2);
+    border-radius: 5px;
+    font-size: 12pt;
+}
+
+/* boutons */
+button {
+    color: var(--blanc);
+    font-size: large;
+    font-weight: var(--weight-bold);
+    background: var(--couleur-principale);
+    border: solid 3px var(--couleur-principale2);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+button:hover {
+    color: var(--blanc2);
+    background: var(--couleur-principale2);
+    cursor: pointer;
+    animation: survol .10s forwards;
+}
+button:not(:hover) {
+    animation: survol2 .10s forwards;
+}
+button:active {
+    background: var(--couleur-secondaire);
+    border: none;
+}
+
+/* tableaux */
+table {
+    text-align: center;
+}
+thead {
+    background: var(--dark3);
+
+}
+td, th {
+    padding: 2%;
+    width: 180px;
+}
+
+/* menus dropdown */
+select, option {
+    background: var(--dark3);
+    color: var(--blanc2);
+    font-size: 14pt;
+    font-family: (--font);
+    border: none;
+    padding: 2%;
+    width: fit-content;
+}
+
+hr {
+    display: block;
+}

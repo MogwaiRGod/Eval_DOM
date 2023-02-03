@@ -1,0 +1,24 @@
+    /* Déclaration et définition de toutes les variables/valeurs du design
+    => Modifier le design dans :root */
+:root {
+    /* couleurs */
+    --dark: rgb(22, 22, 24);
+    --dark2: rgb(44, 42, 47);
+    --dark3: #0a040e;
+    --blanc: rgb(244, 245, 252);
+    --blanc2: rgb(213, 213, 228);
+    --couleur-principale: rgb(225, 73, 43);
+    --couleur-principale2:rgb(132, 58, 44);
+    --couleur-secondaire: rgb(128, 40, 23);
+    --couleur-secondaire2: rgb(74, 33, 25);
+
+    /* typos */
+    --font: 'Nunito', system-ui, sans;
+    --wght-light: 200;
+    --wght-normal: 400;
+    --wght-medium: 400;
+    --weight-bold: 600;
+
+    /* événements */
+    --grow-hover: 1.1;
+}

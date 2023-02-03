@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+    <html lang="fr">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Evaluation</title>
+
+            <!-- Imports de typos Google-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Wallpoet&display=swap" rel="stylesheet">
+
+            <!-- Import des feuilles de style -->
+            <link rel="stylesheet" href="css/root.css"> <!-- Contient les variables du design -->
+            <link rel="stylesheet" href="css/objets.css"> <!-- Contient le design des objets récurrents du site-->
+            <link rel="stylesheet" href="css/style.css"> <!-- Contient la mise en page -->
+            <link rel="stylesheet" href="css/animations.css">
+
+            <!-- Import des fichiers JS-->
+            <script src="js/data.js"></script> <!-- Contient l'accès aux données nécessaires au site -->
+
+            <!-- On va essayer de faire du jQuery -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        </head>
+
+        <body>
+            <!-- Barre de nav -->
+            <nav class="nav" id="nav-menu">
+                <!-- Icône hamburger qui ouvre la barre de nav -->
+                <div id="hamburger" ><svg id="svg-hamburger" name="icone-menu-hamburger" 
+                    clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m22 16.75c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg></div>
+                <!-- Chaque div est un item de la barre de nav -->
+                <div class="module container-module1" id="nav-module1">Module 1</div>
+                <div class="module container-module2" id="nav-module2">Module 2</div>
+                <div class="module container-module3" id="nav-module3">Module 3</div>
+                <div class="module container-module4" id="nav-module4">Module 4</div>
+                <div class="module container-module5" id="nav-module5">Module 5</div>
+            </nav>
+
+            <main>
+                <div id="main-container">
+
+                    <div id="container-module1" class="container-module module-off">
+                        <section id="module1">
+                            <table id="tableau-liens">
+                                <tbody>
+                                    <tr>
+                                        <td class="emoji">
+                                            <a id="emoji1" onmouseleave="cacherImg(box_img)" onmouseover="afficherImage(box_img, 'img1', tab_imgs)">😏</a> 
+                                        </td>
+                                        <td class="emoji">
+                                            <a onmouseleave="cacherImg(box_img)" onmouseover="afficherImage(box_img, 'img2', tab_imgs)">💀</a>
+                                        </td>
+                                        <td class="emoji">
+                                            <a onmouseleave="cacherImg(box_img)" onmouseover="afficherImage(box_img, 'img3', tab_imgs)">😳</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="emoji">
+                                            <a onmouseleave="cacherImg(box_img)" onmouseover="afficherImage(box_img, 'img4', tab_imgs)">🔥</a>
+                                        </td>
+                                        <td class="emoji">
+                                            <a onmouseleave="cacherImg(box_img)" onmouseover="afficherImage(box_img, 'img5', tab_imgs)">😱</a>
+                                        </td>
+                                        <td class="emoji">
+                                            <a onmouseleave="cacherImg(box_img)" onmouseover="afficherImage(box_img, 'img6', tab_imgs)">💦</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="emoji">
+                                            <a onmouseleave="cacherImg(box_img)" onmouseover="afficherImage(box_img, 'img7', tab_imgs)">🤘</a>
+                                        </td>
+                                        <td class="emoji">
+                                            <a onmouseleave="cacherImg(box_img)" onmouseover="afficherImage(box_img, 'img8', tab_imgs)">👀</a>
+                                        </td>
+                                        <td class="emoji">
+                                            <a onmouseleave="cacherImg(box_img)" onmouseover="afficherImage(box_img, 'img9', tab_imgs)">👌</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <img src="" alt="" id="box-img">    
+                        </section>
+                    </div>
+
+                    <div id='container-module2' class="container-module module-off">
+                        <section id="module2">
+                            <label for="nom">Nom</label>
+                            <input id="nom" name="nom" placeholder="Entrer un nom">
+                            <label for="prenom">Prénom</label>
+                            <input id="prenom" name="prenom" placeholder="Entrer un prénom">
+                            <button id="mod2btn">+</button>
+
+                            <table id="table-module2">
+                                <thead>
+                                    <tr>
+                                        <th>Nom</th>
+                                        <th>Prénom</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </section>
+                    </div>
+
+                    <div id='container-module3' class="container-module module-off">
+                        <section id="module3">
+                            <select id="menustyles" name="menustyles" class="dropdown-menu-dark ">
+                                <option value="" selected disabled>Choisissez un style</option>
+                                <option value='console'>Style console</option>
+                                <option value='western'>Style western</option>
+                                <option value='futuriste'>Style futuriste</option>
+                            </select>
+                            <p id="pmodule3">
+                                Aut accusantium ratione eos reprehenderit magnam sed architecto deserunt
+                                deleniti veniam. Qui pariatur quasi ut dolor dolores a repudiandae ipsa est 
+                                quia quia in blanditiis exercitationem
+                            </p>
+                        </section>
+                    </div>
+
+                    <div id='container-module4' class="container-module module-off">
+                        <section id="module4">
+                            <ul id="liste-interactive" class="up">
+                                <li class="li-mod4">Value 1</li>
+                                <li class="li-mod4">Value 2</li>
+                                <li class="li-mod4">Value 3</li>
+                                <li class="li-mod4">Value 4</li>
+                            </ul>
+                            <div>
+                                <button class="btnliste" id="up">↑</button>
+                                <button class="btnliste" id="down">↓</button>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div id='container-module5' class="container-module module-off">
+                        <section></section>
+                    </div>
+
+                </div>
+            </main>
+        </body>
+
+        <!-- Fichiers JS -->
+        <script rel="text/javascript" src="js/fonctions.js"></script>  <!-- Contient les fonctions qui font fonctionner le site -->
+        <script rel="text/javascript" src="js/variables_globales.js"></script>
+
+        <script>
+
+            /*  ////    EVENEMENTS  ////    */
+
+                /* Menu */
+
+            // Clic sur l'icône hamburger => ouverture du menu
+            hamburger.addEventListener('click', () => {
+                menu_ouvert = affichageMenu(barre_nav, menu_ouvert, modules);
+                return;
+            });
+
+            // Survol d'un item du menu => aperçu du module associé
+            // Bon, toute cette partie bogue à mort
+            document.querySelectorAll(".module").forEach(e => { // sélectionne les items du menu
+                // ajout d'un évenement au survol
+                e.addEventListener('mouseover', () => { 
+                    let id_mod = e.classList.item(1); // la 3e classe d'un objet .module est l'id du module correspondant
+                    apercu(id_mod); // aperçu du module
+                    // ajout d'un événement au clic
+                    e.addEventListener('click', () => {
+                        let id_mod = e.classList.item(1);
+                        affichageModule(id_mod);
+                    });
+                });
+                // ajout d'un événement à la fin du survol
+                e.addEventListener('mouseleave', () => {
+                    let id_mod = e.classList.item(1);
+                    finApercu(id_mod);
+                    
+                });
+                
+            });
+
+
+                /* Module 2 */
+            mod2btn.addEventListener('click', () => {
+                let input1 = document.getElementById("nom").value;
+                let input2 = document.getElementById("prenom").value;
+                let tab_mod2 = document.getElementById("table-module2");
+                (checkInput(input1) && checkInput(input2)) ? ajouterRangee(tab_mod2, input1, input2) : alert ("Veuillez entrer des valeurs valides");
+                
+                return;
+            });
+
+                /* Module 3 */
+            menustyles.addEventListener('change', () => {   // problème : si on veut choisir l'option déjà sélectionnée, ne réagit pas...
+                let paragraphe = document.getElementById("pmodule3");
+                // dans les 2 lignes suivantes, on va utiliser jQuery pour récupérer la valeur sélectionnée dans le menu déroulant
+                let typo_style = styles[0][$("#menustyles option:selected").val()][0]["font-family"];
+                let couleur_style = styles[0][$("#menustyles option:selected").val()][0]["color"];
+                let bg = styles[0][$("#menustyles option:selected").val()][0]["background"];
+
+                // on applique le style au paragraphe
+                paragraphe.style.fontFamily = typo_style;
+                paragraphe.style.color = couleur_style;
+                paragraphe.style.background = bg;
+            });
+
+                /* Module 4 */
+            document.querySelectorAll(".btnliste").forEach(item => { // sélectionne les boutons UP et DOWN
+                item.addEventListener('click', () => {  // on applique aux deux le même event listener
+                    let input_sens = item.id; // on récupère le sens de la liste désiré par l'utilisateur
+                    let liste_html = document.getElementById("liste-interactive");
+
+                    changerSensListe(input_sens, liste_html);
+                    return;
+                });
+            });
+
+        </script>
+    </html>
