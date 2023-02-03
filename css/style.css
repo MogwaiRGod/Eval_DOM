@@ -72,9 +72,9 @@ nav {
 
 
 
-            /*  ////////////////////// LES MODULES (général)    ////////////*   /
+            /*  ////////////////////// LES MODULES (général)    //////////// */
 
-.container-module {
+.container-module { /* design d'un module par défaut */
     background: var(--dark2);
     color: var(--blanc2);
     font-weight: var(--wght-normal);
@@ -106,7 +106,7 @@ nav {
     left: 20px;
 }
 
-.emoji {
+#tableau-liens td { /* Pour les emojis du tableau */
     font-size: 26pt;
     margin: 10px;
     width: auto;
@@ -114,10 +114,10 @@ nav {
     text-decoration: none;
     cursor: pointer;
 }
-.emoji:hover {
+#tableau-liens td:hover {
     animation: survol .25s forwards;
 }
-.emoji:not(:hover) {
+#tableau-liens td:not(:hover) {
     animation: survol2 0.25s forwards;
 }
 
@@ -130,6 +130,7 @@ img {
     left: 25px;
 }
 
+
     /* Module 2 */
 #container-module2 {
     padding: 2%;
@@ -141,18 +142,14 @@ img {
 }
 
 #module2 label {
-    font-family: var(--font);
     font-weight: var(--wght-light);
-    color: var(--blanc);
 }
 
 #table-module2 {
-    color: var(--blanc);
+
     font-size: 12pt;
-    font-family: var(--font);
     margin-top: 100px;
 }
-
 #module2 label:nth-child(3) {
     margin-top: 5%;
 }
@@ -163,6 +160,7 @@ img {
     float: right;
 }
 
+
     /* Module 3 */
         
 #menustyles {
@@ -170,15 +168,14 @@ img {
 }
 
 #pmodule3 {
-    font-family: var(--font);
-    color: var(--blanc);
     position: relative;
     top: 30vh;
     width: 85%;
     margin: 5%;
     padding: 3%;
 }
-        
+
+
     /* Module 4 */
         
 #module4 {
@@ -201,12 +198,6 @@ img {
     border-radius: 10px;
     width: 100px;
     padding: 5%;
-}
-
-#module4 ul li {
-    font-weight: var(--wght-normal);
-    font-family: var(--font);
-    color: var(--blanc);
 }
         
 #module4 div button {

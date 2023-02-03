@@ -86,9 +86,9 @@ function afficherImage(zone_img, id_img, tab) {
         }
     }
     // et on l'affiche dans la balise image (contenue dans zone_img) prévue à cet effet
-    zone_img.alt = image.alt;
-    zone_img.src = image.src;
-    zone_img.style.display = 'inline';
+    zone_img.alt = image.alt;   // ajout du texte alternatif
+    zone_img.src = image.src;   // ajout de la source de l'image
+    zone_img.style.display = 'inline';  // affichage de l'image
     return;
 }
 
