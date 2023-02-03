@@ -147,15 +147,33 @@
                     <!-- Module 5 -->
                     <div id='container-module5' class="container-module module-off">
                         <section id="module5">
-                            <label>Choisis un ou plusieurs pseudos</label>
-                            <input type="checkbox" value="Pedr0Lov3">
-                            <label>Pedr0Lov3</label>
-                            <input type="checkbox" value="xXPedroLeLoverXx">
-                            <label>xXPedroLeLoverXx</label>
-                            <input type="checkbox" value="PedroLuvDu34">
-                            <label>PedroLuvDu34</label>
-                            <input type="checkbox" value="PedroBG">
-                            <label>PedroBG</label>
+                            <form>
+                                <label>Choisis un ou plusieurs pseudos</label>
+                                <div>
+                                    <input class="pseudomod5" type="checkbox" value="xXPedroLeLoverXx" id="essai">
+                                    <label>Pedr0Lov3</label>
+                                </div>
+                                <div>
+                                    <input class="pseudomod5" type="checkbox" value="Pedr0Lov3">
+                                    <label>xXPedroLeLoverXx</label>
+                                </div>   
+                                <div>
+                                    <input class="pseudomod5" type="checkbox" value="PedroLuvDu34">
+                                    <label>PedroLuvDu34</label> 
+                                </div>
+                                <div>
+                                    <input class="pseudomod5" type="checkbox" value="PedroBG">
+                                    <label>PedroBG</label>
+                                </div>
+
+                                <label>Veux-tu les mettre dans une div ou un menu déroulant ?</label>
+                                <div id="divradiomod5">
+                                    <input name ="radiomod5" type="radio" id="radiodiv" value="div">
+                                    <label for="radiodiv">Div</label>
+                                    <input name ="radiomod5" type="radio" id="radiodrop" value="dropdown">
+                                    <label for="radiodrop">Menu déroulant</label>
+                                </div>
+                            </form>
                         </section>
                     </div>
 

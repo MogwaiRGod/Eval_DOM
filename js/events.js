@@ -1,6 +1,3 @@
-
-                            /*  ////    TOUS LES EVENT-LISTENERS  ////    */
-
             /* MENU */
 
 // Clic sur l'icône hamburger => ouverture du menu
@@ -56,7 +53,8 @@ mod2btn.addEventListener('click', () => {
     return;
 });
 
-    /* Module 3 */
+
+        /* MODULE 3 */
 menustyles.addEventListener('change', () => {   // problème : si on veut choisir l'option déjà sélectionnée, ne réagit pas...
     let paragraphe = document.getElementById("pmodule3");
     // dans les 2 lignes suivantes, on va utiliser jQuery pour récupérer la valeur sélectionnée dans le menu déroulant
@@ -70,7 +68,8 @@ menustyles.addEventListener('change', () => {   // problème : si on veut choisi
     paragraphe.style.background = bg;
 });
 
-    /* Module 4 */
+
+    /* MODULE 4 */
 document.querySelectorAll(".btnliste").forEach(item => { // sélectionne les boutons UP et DOWN
     item.addEventListener('click', () => {  // on applique aux deux le même event listener
         let input_sens = item.id; // on récupère le sens de la liste désiré par l'utilisateur
@@ -80,3 +79,36 @@ document.querySelectorAll(".btnliste").forEach(item => { // sélectionne les bou
         return;
     });
 });
+
+
+    /* MODULE 5 */
+document.getElementsByName("radiomod5").forEach(radio => {  // sélection des boutons radios
+    radio.addEventListener('click', () => {    // dès qu'il y a une interaction avec un bouton,
+                                                    // on procède au traitement des données
+        // récupération des items cochés par l'utilisateur
+        let tmp = document.getElementsByClassName("pseudomod5"), items_coches = []; //tmp contient tous les items pa encore triés
+        for (let i=0; i<tmp.length; i++) {
+            if (tmp[i].checked) {   // si l'item est coché, on l'ajoute à la liste items_coches
+                items_coches.push(tmp[i].value)
+            }
+        }
+        
+        if (!items_coches.length){    // si aucun item n'a été coché, on quite la fonction
+            return;
+        } else { // sinon, on procède à la suite 
+            let choix = radio.value;
+            switch (choix) {    // selon ce que l'utilisateur a choisi
+                case 'dropdown':
+                    // création d'un menu dropdown
+                    // ajout des items cochés en tant qu'options du menu
+                    console.log("ok");
+                    return;
+                case 'div':
+                    // création d'une div
+                    // création d'un paragraphe
+                    // ajout des items cochés en tant que texte du paragraphe
+                    return;
+            } // FIN SWITCG
+        } // FIN SI
+    }); // FIN EVENT LISTENER
+}); // FIN FOREACH 

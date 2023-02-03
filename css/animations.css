@@ -19,14 +19,3 @@
         transform: scale(calc(1 / var(--grow-hover)));
     } 
 }
-
-@keyframes apparition {
-    /* fait apparaître l'objet en fondu 
-    Je crois que cette animation ne fonctionne qu'une fois, et je ne sais pas pourquoi ??? */
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    } 
-}
