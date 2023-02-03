@@ -105,8 +105,7 @@ function checkInput(ipt){
 }
 
 function ajouterRangee(tab, ipt1, ipt2) {
-    let rangee = document.createElement('tr');
-    let inputs = [ipt1, ipt2];
+    let rangee = document.createElement('tr'), inputs = [ipt1, ipt2];
     
     for (let i=0; i<inputs.length; i++){
         // crétion d'une cellule
@@ -128,7 +127,7 @@ function ajouterRangee(tab, ipt1, ipt2) {
 // fonction qui, pour un sens entré par l'utilisateur, va changer l'odre des items d'une liste
 function changerSensListe(ipt_sens, liste) {
     function check_sens(sens, lst){   // fonction qui vérifie que l'ordre demandé par l'utilisateur n'est pas déjà appliqué
-        if (sens === liste.classList[0]){
+        if (sens === lst.classList[0]){
             return 0;
         }
         else {
