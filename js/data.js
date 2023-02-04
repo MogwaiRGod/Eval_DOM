@@ -37,12 +37,12 @@ styles = [
             'background' : "var(--dark3)" 
         }],
         'western' : [{
-            'font-family' : "'Rockwell'",
+            'font-family' : "'Rockwell', serif",
             'color' : "darkkhaki",
             'background' : "var(--dark3)" 
         }],
         'futuriste' : [{
-            'font-family' : "'Wallpoet'",
+            'font-family' : "'Wallpoet', Ubuntu, sans-serif",
             'color' : "palegreen",
             'background' : "var(--dark3)" 
         }]
