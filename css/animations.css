@@ -9,7 +9,7 @@
 }
 
 @keyframes survol2 {
-    /* fonctionne mais cause des soucis de taille ... */
+    /* de même mais pour rétrécir */
     from {
         transform: scale(1);
     }
