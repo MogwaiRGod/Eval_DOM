@@ -32,16 +32,16 @@
 
         <body>
             <!-- Barre de nav -->
-            <nav class="nav" id="nav-menu">
+            <nav class="nav" id="nav-menu" >
                 <!-- Icône hamburger qui ouvre la barre de nav -->
-                <div id="hamburger" ><svg id="svg-hamburger" name="icone-menu-hamburger" 
+                <div id="hamburger" class="survolable"><svg  id="svg-hamburger" name="icone-menu-hamburger" 
                     clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m22 16.75c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg></div>
                 <!-- Chaque div est un item de la barre de nav -->
-                <div class="module container-module1">Module 1</div>
-                <div class="module container-module2">Module 2</div>
-                <div class="module container-module3">Module 3</div>
-                <div class="module container-module4">Module 4</div>
-                <div class="module container-module5">Module 5</div>
+                <div class="module container-module1 survolable">Module 1</div>
+                <div class="module container-module2 survolable">Module 2</div>
+                <div class="module container-module3 survolable">Module 3</div>
+                <div class="module container-module4 survolable">Module 4</div>
+                <div class="module container-module5 survolable">Module 5</div>
             </nav>
 
             <main>
@@ -85,8 +85,8 @@
                                             <a class="emoji img9">👌</a>
                                         </td>
                                     </tr>
-                                </tbody>
                             </table>
+
                             <img src="" alt="" id="box-img">    
                         </section>
                     </div>
@@ -98,7 +98,7 @@
                             <input id="nom" name="nom" placeholder="Entrer un nom">
                             <label for="prenom">Prénom</label>
                             <input id="prenom" name="prenom" placeholder="Entrer un prénom">
-                            <button id="mod2btn">+</button>
+                            <button id="mod2btn" class="survolable">+</button>
 
                             <table id="table-module2">
                                 <thead>
@@ -138,8 +138,8 @@
                                 <li class="li-mod4">Value 4</li>
                             </ul>
                             <div>
-                                <button class="btnliste" id="up">↑</button>
-                                <button class="btnliste" id="down">↓</button>
+                                <button class="btnliste survolable" id="up">↑</button>
+                                <button class="btnliste survolable" id="down">↓</button>
                             </div>
                         </section>
                     </div>
@@ -149,29 +149,32 @@
                         <section id="module5">
                             <form>
                                 <label>Choisis un ou plusieurs pseudos</label>
-                                <div>
-                                    <input class="pseudomod5" type="checkbox" value="xXPedroLeLoverXx" id="essai">
-                                    <label>Pedr0Lov3</label>
-                                </div>
-                                <div>
-                                    <input class="pseudomod5" type="checkbox" value="Pedr0Lov3">
-                                    <label>xXPedroLeLoverXx</label>
-                                </div>   
-                                <div>
-                                    <input class="pseudomod5" type="checkbox" value="PedroLuvDu34">
-                                    <label>PedroLuvDu34</label> 
-                                </div>
-                                <div>
-                                    <input class="pseudomod5" type="checkbox" value="PedroBG">
-                                    <label>PedroBG</label>
+                                <div class="divs-form"> <!-- Le design des checkbox de BS rend galère la personnalisation -->
+                                    <div class="check-input">
+                                        <input class="pseudomod5" type="checkbox" value="Pedr0Lov3" id="essai">
+                                        <label class="label-check">Pedr0Lov3</label>
+                                    </div>
+                                    <div class="check-input">
+                                        <input class="pseudomod5" type="checkbox" value="xXPedroLeLoverXx">
+                                        <label class="label-check">xXPedroLeLoverXx</label>
+                                    </div>   
+                                    <div class="check-input">
+                                        <input class="pseudomod5" type="checkbox" value="PedroLuvDu34">
+                                        <label class="label-check">PedroLuvDu34</label> 
+                                    </div>
+                                    <div class="check-input">
+                                        <input class="pseudomod5" type="checkbox" value="PedroBG">
+                                        <label class="label-check">PedroBG</label>
+                                    </div>
                                 </div>
 
-                                <label>Veux-tu les mettre dans une div ou un menu déroulant ?</label>
-                                <div id="divradiomod5">
+                                <label>Veux-tu les mettre dans une div ou dans un menu déroulant ?</label>
+                                <div class="divs-form" id="divradiomod5">
                                     <input name ="radiomod5" type="radio" id="radiodiv" value="div">
-                                    <label for="radiodiv">Div</label>
+                                    <label for="radiodiv" class="label-check">Div</label>
                                     <input name ="radiomod5" type="radio" id="radiodrop" value="dropdown">
-                                    <label for="radiodrop">Menu déroulant</label>
+                                    <label for="radiodrop" class="label-check">Menu déroulant</label>
+                                    <hr>
                                 </div>
                             </form>
                         </section>
@@ -182,7 +185,8 @@
         </body>
 
         <!-- Fichiers JS -->
-        <script rel="text/javascript" src="js/fonctions.js"></script>  <!-- Contient les fonctions qui font fonctionner le site -->
+        <script rel="text/javascript" src="js/fonctions_generales.js"></script> <!-- Contient des fonctions réutilisables pour faire fonctionner le site -->
+        <script rel="text/javascript" src="js/fonctions.js"></script>  <!-- Contient des fonctions spécifiques à des éléments du site -->
         <script rel="text/javascript" src="js/variables_globales.js"></script>  <!-- Contient toutes les variables fréquentes du document -->
         <script rel="text/javascript" src="js/events.js"></script> <!-- Contient tous les event listeners (événements) -->
 

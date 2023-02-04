@@ -9,9 +9,7 @@
 }
 
 @keyframes survol2 {
-    /* animation pour faire revenir l'élément à sa taille initiale (via un calcul)
-    problème : je crois qu'elle se déclenche quand la souris n'est PAS sur l'élément, pas quand elle vient de le quitte =>
-    l'objet est perpetuellement plus petit que prévu... */
+    /* fonctionne mais cause des soucis de taille ... */
     from {
         transform: scale(1);
     }
