@@ -34,7 +34,7 @@
             <!-- Barre de nav -->
             <nav class="nav" id="nav-menu" >
                 <!-- Icône hamburger qui ouvre la barre de nav -->
-                <div id="hamburger" class="survolable"><svg  id="svg-hamburger" name="icone-menu-hamburger" 
+                <div id="hamburger" class="survolable"><svg  id="svg-hamburger" 
                     clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m22 16.75c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg></div>
                 <!-- Chaque div est un item de la barre de nav -->
                 <div class="module container-module1 survolable">Module 1</div>
@@ -49,7 +49,7 @@
 
                     <!-- Module 1 -->
                     <div id="container-module1" class="container-module module-off"> <!-- Div pour la totalité du module -->   
-                        <section id="module1"> <!-- Section pour le contenu -->
+                        <div id="module1"> <!-- div pour le contenu -->
                             <table id="tableau-liens">
                                 <tbody>
                                     <tr>
@@ -87,13 +87,13 @@
                                     </tr>
                             </table>
 
-                            <img src="" alt="" id="box-img">    
-                        </section>
+                            <img src="#" alt="" id="box-img">    
+                        </div>
                     </div>
 
                     <!-- Module 2 -->
                     <div id='container-module2' class="container-module module-off">
-                        <section id="module2">
+                        <div id="module2">
                             <label for="nom">Nom</label>
                             <input id="nom" name="nom" placeholder="Entrer un nom">
                             <label for="prenom">Prénom</label>
@@ -108,12 +108,12 @@
                                     </tr>
                                 </thead>
                             </table>
-                        </section>
+                        </div>
                     </div>
 
                     <!-- Module 3 -->
                     <div id='container-module3' class="container-module module-off">
-                        <section id="module3">
+                        <div id="module3">
                             <select id="menustyles" name="menustyles" class="dropdown-menu-dark ">
                                 <option value="" selected disabled>Choisissez un style</option>
                                 <option value='console'>Style console</option>
@@ -125,12 +125,12 @@
                                 deleniti veniam. Qui pariatur quasi ut dolor dolores a repudiandae ipsa est 
                                 quia quia in blanditiis exercitationem
                             </p>
-                        </section>
+                        </div>
                     </div>
 
                     <!-- Module 4 -->
                     <div id='container-module4' class="container-module module-off">
-                        <section id="module4">
+                        <div id="module4">
                             <ul id="liste-interactive" class="up">
                                 <li class="li-mod4">Value 1</li>
                                 <li class="li-mod4">Value 2</li>
@@ -141,12 +141,12 @@
                                 <button class="btnliste survolable" id="up">↑</button>
                                 <button class="btnliste survolable" id="down">↓</button>
                             </div>
-                        </section>
+                        </div>
                     </div>
 
                     <!-- Module 5 -->
                     <div id='container-module5' class="container-module module-off">
-                        <section id="module5">
+                        <div id="module5">
                             <form>
                                 <label>Choisis un ou plusieurs pseudos</label>
                                 <div class="divs-form"> <!-- Le design des checkbox de BS rend galère la personnalisation -->
@@ -177,17 +177,18 @@
                                     <hr>
                                 </div>
                             </form>
-                        </section>
+                        </div>
                     </div>
 
                 </div>
             </main>
-        </body>
 
-        <!-- Fichiers JS -->
+            <!-- Fichiers JS -->
         <script rel="text/javascript" src="js/fonctions_generales.js"></script> <!-- Contient des fonctions réutilisables pour faire fonctionner le site -->
         <script rel="text/javascript" src="js/fonctions.js"></script>  <!-- Contient des fonctions spécifiques à des éléments du site -->
         <script rel="text/javascript" src="js/variables_globales.js"></script>  <!-- Contient toutes les variables fréquentes du document -->
         <script rel="text/javascript" src="js/events.js"></script> <!-- Contient tous les event listeners (événements) -->
+
+        </body>
 
     </html>
