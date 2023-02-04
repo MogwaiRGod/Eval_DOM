@@ -81,7 +81,7 @@ mod2btn.addEventListener('click', () => {
 
 
         /* MODULE 3 */
-menustyles.addEventListener('change', () => {   // problème : si on veut choisir l'option déjà sélectionnée, ne réagit pas...
+menustyles.addEventListener('click', () => {   // problème : si on veut choisir l'option déjà sélectionnée, ne réagit pas...
     let paragraphe = document.getElementById("pmodule3");
     // dans les 2 lignes suivantes, on va utiliser jQuery pour récupérer la valeur sélectionnée dans le menu déroulant
     let typo_style = styles[0][$("#menustyles option:selected").val()][0]["font-family"];
