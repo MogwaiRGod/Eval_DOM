@@ -20,7 +20,7 @@ body {
 
             /*  //////////////////   BARRE DE NAV /////////////// */
 
-nav {
+nav ul{
     background: none;
     z-index: 10;
     box-sizing: border-box;
@@ -29,7 +29,10 @@ nav {
     justify-content:space-between; 
     height: 43px;
     width: 100%;
+    margin: 0;
     margin-bottom: 20px;
+    list-style-type: none;
+    padding: 0;
 }
 
     /* Contenu de la barre de nav */
