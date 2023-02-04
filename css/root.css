@@ -1,5 +1,5 @@
-    /* Déclaration et définition de toutes les variables/valeurs du design
-    => Modifier le design dans :root */
+    /** Déclaration et définition de toutes les variables/valeurs du design
+    => Modifier le design dans :root **/
 :root {
     /* couleurs */
     --dark: rgb(22, 22, 24);
@@ -22,3 +22,15 @@
     /* événements */
     --grow-hover: 1.1;
 }
+
+    /** Classes générales **/
+
+/* pour empêcher la sélection d'un texte par l'utilisateur */
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }

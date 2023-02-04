@@ -46,6 +46,4 @@ Diane (MogwaiRGod)
     - Module 5
     Sur clic d'un bouton radio, affiche une div ou un menu déroulant contenant les choix utilisateurs cochés d'une checkbox.
 
-# Débogage
-Le survol/clic des items du menu bogue parfois.
   

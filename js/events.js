@@ -39,16 +39,15 @@ document.querySelectorAll(".module").forEach(e => { // sélectionne les items du
         let id_mod = e.classList.item(1); // la 2e classe d'un objet .module est l'id du module correspondant
         apercu(id_mod); // aperçu du module
         // ajout d'un événement au clic
-        e.addEventListener('click', () => {
-            let id_mod = e.classList.item(1);
-            affichageModule(id_mod);
-        });
+    });
+    e.addEventListener('click', () => {
+        let id_mod = e.classList.item(1);
+        affichageModule(id_mod);
     });
     // ajout d'un événement à la fin du survol
     e.addEventListener('mouseleave', () => {
         let id_mod = e.classList.item(1);
         finApercu(id_mod);
-        
     });
     
 });
@@ -117,7 +116,6 @@ document.getElementsByName("radiomod5").forEach(radio => {  // sélection des bo
 
         // récupération des items cochés par l'utilisateur
         let tmp = document.getElementsByClassName("pseudomod5");
-        console.log(tmp);
         let items_coches = recupItemsCoches(tmp);
         
         // récupération de l'objet HTMl qui va recevoir la div ou le menu déroulant
