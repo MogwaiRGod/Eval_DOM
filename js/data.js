@@ -27,9 +27,9 @@ let tab_imgs = [
     'alt' : `Cityscape 2 (c) @Oudartsy`,
     'src' : 'imgs/cityscape2.png'
     }
-];
+], 
 
-let styles = [
+styles = [
     {
         'console' : [{
             'font-family' : "'Source Code Pro', 'Courier New', monospace",

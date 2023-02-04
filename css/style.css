@@ -27,24 +27,26 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content:space-between; 
-    height: 40px;
+    height: 43px;
     width: 100%;
     margin-bottom: 20px;
 }
 
     /* Contenu de la barre de nav */
-#svg-hamburger {    /* icône svg menu hamburger */
+#svg-hamburger {
     fill: var(--blanc);
+    height: 40px;
+}
+#hamburger {    /* icône svg menu hamburger */   
     background: var(--couleur-secondaire);
     margin: 0;
-    height: 40px;
     padding: 0 20px;
     cursor: pointer;
+    height: fit-content;
 }
-#svg-hamburger:hover {
+#hamburger:hover {
     fill: var(--blanc2);
     background: var(--couleur-secondaire2);
-    animation: survol .25s forwards;
 }
 
 .module {   
@@ -67,14 +69,13 @@ nav {
 .module:hover {
     background: var(--couleur-principale2);
     color: var(--blanc2);
-    animation: survol .25s forwards; 
 }
 
 
 
-            /*  ////////////////////// LES MODULES (général)    ////////////*   /
+            /*  ////////////////////// LES MODULES (général)    //////////// */
 
-.container-module {
+.container-module { /* design d'un module par défaut */
     background: var(--dark2);
     color: var(--blanc2);
     font-weight: var(--wght-normal);
@@ -106,7 +107,7 @@ nav {
     left: 20px;
 }
 
-.emoji {
+#tableau-liens td { /* Pour les emojis du tableau */
     font-size: 26pt;
     margin: 10px;
     width: auto;
@@ -114,12 +115,13 @@ nav {
     text-decoration: none;
     cursor: pointer;
 }
-.emoji:hover {
+#tableau-liens td:hover {
     animation: survol .25s forwards;
 }
-.emoji:not(:hover) {
+#tableau-liens td:not(:hover) {
     animation: survol2 0.25s forwards;
 }
+
 
 img {
     display: none;
@@ -129,6 +131,7 @@ img {
     height: auto;
     left: 25px;
 }
+
 
     /* Module 2 */
 #container-module2 {
@@ -140,19 +143,11 @@ img {
     display: block;
 }
 
-#module2 label {
-    font-family: var(--font);
-    font-weight: var(--wght-light);
-    color: var(--blanc);
-}
-
 #table-module2 {
-    color: var(--blanc);
+
     font-size: 12pt;
-    font-family: var(--font);
     margin-top: 100px;
 }
-
 #module2 label:nth-child(3) {
     margin-top: 5%;
 }
@@ -163,6 +158,11 @@ img {
     float: right;
 }
 
+.sep-mod2 {
+    margin: 0;
+}
+
+
     /* Module 3 */
         
 #menustyles {
@@ -170,15 +170,14 @@ img {
 }
 
 #pmodule3 {
-    font-family: var(--font);
-    color: var(--blanc);
     position: relative;
     top: 30vh;
     width: 85%;
     margin: 5%;
     padding: 3%;
 }
-        
+
+
     /* Module 4 */
         
 #module4 {
@@ -202,12 +201,6 @@ img {
     width: 100px;
     padding: 5%;
 }
-
-#module4 ul li {
-    font-weight: var(--wght-normal);
-    font-family: var(--font);
-    color: var(--blanc);
-}
         
 #module4 div button {
     margin: 0 10px 0 10px;
@@ -215,4 +208,23 @@ img {
 
 #module4 ul {
     background: var(--dark3);
+}
+
+
+    /* MODULE 5 */
+
+#container-module5 {
+    padding: 2%;
+}
+
+.label-check {
+    font-weight: var(--wght-medium);
+}
+
+.check-input {
+    margin: 5px 0;
+}
+
+.divs-form {
+    margin: 10px 0;
 }

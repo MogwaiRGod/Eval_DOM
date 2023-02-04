@@ -10,6 +10,11 @@ input {
     font-size: 12pt;
 }
 
+label {
+    font-weight: var(--wght-light);
+}
+
+
 /* boutons */
 button {
     color: var(--blanc);
@@ -25,10 +30,6 @@ button:hover {
     color: var(--blanc2);
     background: var(--couleur-principale2);
     cursor: pointer;
-    animation: survol .10s forwards;
-}
-button:not(:hover) {
-    animation: survol2 .10s forwards;
 }
 button:active {
     background: var(--couleur-secondaire);
@@ -59,6 +60,9 @@ select, option {
     width: fit-content;
 }
 
+
+/* autres */
 hr {
     display: block;
+    margin: 40px 0;
 }
