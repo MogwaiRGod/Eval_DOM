@@ -45,6 +45,8 @@ function finApercu(id){
     mod.style.opacity = '1';
     return;
 }
+
+
     ////////////    MODULES     //////////////////
 
 // ouvre le module sélectionné dans la nav
@@ -117,11 +119,26 @@ function ajouterRangee(tab, ipt1, ipt2) {
     }
     //ajout de la rangée au tableau
     tab.appendChild(rangee);   
-    tab.appendChild(document.createElement('hr'));  // ajout d'une séparation entre chaque rangée
+    let separation = document.createElement('hr');
+    separation.setAttribute('class', 'sep-mod2');
+    tab.appendChild(separation);  
     //affichage du tableau
     tab.style.display = 'block';
     return;
 }
+
+
+    /* MODULE 3 */
+
+// fonction qui applique un style spécifique à un objet
+function appliquerStyle (obj, liste) {
+    liste.forEach(css => {
+        obj.style[`${css[0]}`] = css[1];
+    });
+
+    return obj;
+}  
+
 
     /* MODULE 4 */
 // fonction qui, pour un sens entré par l'utilisateur, va changer l'odre des items d'une liste
@@ -158,3 +175,47 @@ function changerSensListe(ipt_sens, liste) {
 
     return;
 }
+
+
+    /* MODULE 5 */
+
+function divDropdownMod5(receveur, items, choix_uti){
+    let tmp_obj = document.getElementsByClassName("tmp-obj-on"); // liste temporaire qui contient, maximum,
+                                                                // un objet HTML demandé par l'utilisateur
+    // on vérifie que l'utilisateur n'a pas déjà demandé un objet
+    if (tmp_obj.length) { // si oui , on supprime l'objet d'jà affiché
+        receveur.removeChild(tmp_obj[0]);
+    }
+    // si non/ensuite, on peut procéder à la suite de la fonction
+    switch (choix_uti) {    // selon ce que l'utilisateur a choisi
+        case 'dropdown':
+            // création d'un menu dropdown
+            let menu = document.createElement("select");
+            // ajout des items cochés en tant qu'options du menu
+            items.forEach(e => {
+                let new_option = document.createElement("option");
+                new_option.innerText = e;
+                menu.appendChild(new_option);
+            });
+            menu.setAttribute("class", "tmp-obj-on");   // pour indiquer qu'un nouvel objet HTML
+                                                        // est affiché
+            receveur.appendChild(menu); // ajout du menu obtenu au module
+            return;
+        case 'div':
+            // création d'une div et d'un paragraphe
+            let new_div = document.createElement("div"); let para = document.createElement("p");
+    
+            // ajout des items cochés en tant que texte du paragraphe
+            items.forEach(e => {
+                let texte = document.createTextNode(e); // création d'un noeud-texte à partir de l'item
+                para.appendChild(texte);    // ajout de ce noeud au paragraphe
+                para.appendChild(document.createElement('br')); // retour à la ligne
+            });
+            new_div.appendChild(para); // ajout du paragraphe obtenu à la div
+            new_div.setAttribute("class", "tmp-obj-on");
+            receveur.appendChild(new_div);
+            return;
+    } // FIN SWITCH
+}
+
+    

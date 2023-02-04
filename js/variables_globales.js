@@ -1,7 +1,8 @@
             /*  CSS */
 // récupère la couleur principale du site via le CSS :root
 let couleur_principale = window.getComputedStyle(document.documentElement).getPropertyValue('--couleur-principale'),
-
+// durée de base des animations
+duree_anim = '0.25s',
 
 
             /* HTML */

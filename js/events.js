@@ -1,4 +1,29 @@
-            /* MENU */
+                /* ANIMATIONS   */
+            
+// fait grossir/rétrécir un item au survol/fin du survol
+document.querySelectorAll(".survolable").forEach(item => {
+    let duree = duree_anim;
+    if (item.tagName == "BUTTON"){   // les animations sont plus rapides
+                                            // pour les boutons
+        duree = "0.10s";
+    }
+
+    item.addEventListener('mouseover', () => {
+        if (item.id == 'hamburger') {
+            item = document.getElementById("svg-hamburger");
+        }
+        anim(item, "survol", duree);
+        return;
+    });
+    
+    item.addEventListener('mouseleave', () => {
+        anim(item, "survol2", duree);
+        return;
+    });
+});
+
+
+                /* MENU */
 
 // Clic sur l'icône hamburger => ouverture du menu
 hamburger.addEventListener('click', () => {
@@ -48,6 +73,7 @@ mod2btn.addEventListener('click', () => {
     let input1 = document.getElementById("nom").value;
     let input2 = document.getElementById("prenom").value;
     let tab_mod2 = document.getElementById("table-module2");
+    // si les valeur entrées sont valides, on procède à l'application, sinon on envoie une alerte
     (checkInput(input1) && checkInput(input2)) ? ajouterRangee(tab_mod2, input1, input2) : alert ("Veuillez entrer des valeurs valides");
     
     return;
@@ -61,11 +87,13 @@ menustyles.addEventListener('change', () => {   // problème : si on veut choisi
     let typo_style = styles[0][$("#menustyles option:selected").val()][0]["font-family"];
     let couleur_style = styles[0][$("#menustyles option:selected").val()][0]["color"];
     let bg = styles[0][$("#menustyles option:selected").val()][0]["background"];
-
+    let liste_style = [
+                        ['fontFamily', typo_style],
+                        ['color', couleur_style],
+                        ['background', bg]
+                    ];
     // on applique le style au paragraphe
-    paragraphe.style.fontFamily = typo_style;
-    paragraphe.style.color = couleur_style;
-    paragraphe.style.background = bg;
+    appliquerStyle(paragraphe, liste_style);
 });
 
 
@@ -85,30 +113,21 @@ document.querySelectorAll(".btnliste").forEach(item => { // sélectionne les bou
 document.getElementsByName("radiomod5").forEach(radio => {  // sélection des boutons radios
     radio.addEventListener('click', () => {    // dès qu'il y a une interaction avec un bouton,
                                                     // on procède au traitement des données
+
+
         // récupération des items cochés par l'utilisateur
-        let tmp = document.getElementsByClassName("pseudomod5"), items_coches = []; //tmp contient tous les items pa encore triés
-        for (let i=0; i<tmp.length; i++) {
-            if (tmp[i].checked) {   // si l'item est coché, on l'ajoute à la liste items_coches
-                items_coches.push(tmp[i].value)
-            }
-        }
+        let tmp = document.getElementsByClassName("pseudomod5");
+        console.log(tmp);
+        let items_coches = recupItemsCoches(tmp);
         
+        // récupération de l'objet HTMl qui va recevoir la div ou le menu déroulant
+        let parent = document.getElementById("module5");
+
         if (!items_coches.length){    // si aucun item n'a été coché, on quite la fonction
             return;
         } else { // sinon, on procède à la suite 
-            let choix = radio.value;
-            switch (choix) {    // selon ce que l'utilisateur a choisi
-                case 'dropdown':
-                    // création d'un menu dropdown
-                    // ajout des items cochés en tant qu'options du menu
-                    console.log("ok");
-                    return;
-                case 'div':
-                    // création d'une div
-                    // création d'un paragraphe
-                    // ajout des items cochés en tant que texte du paragraphe
-                    return;
-            } // FIN SWITCG
+            let choix = radio.value;    // récupère la valeur du bouton radio coché par l'utilisateur
+            divDropdownMod5(parent, items_coches, choix);
         } // FIN SI
     }); // FIN EVENT LISTENER
 }); // FIN FOREACH 
