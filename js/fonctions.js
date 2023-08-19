@@ -78,10 +78,15 @@ function affichageModule(id){
     //////////////////  FONCTIONS INTERNES AUX MODULES  ///////////////////////
 
         /*  MODULE  1*/
-// fonction qui affiche une image dans un bloc spécifique, selon une ID spécifique
-function afficherImage(zone_img, id_img, tab) {
+/*
+ * fonction qui affiche une image (contenue dans tab)
+ * dans un bloc spécifique (zone_img), 
+ * selon une ID spécifique (id_img)
+**/
+function afficherImage(/* HTMLElement div */ zone_img, /* string */ id_img, /* array d'images */ tab) {
     let image;
-    for (let i=0; i<tab.length; i++){   // on chercher dans la liste d'images l'image à l'ID correspondant
+    // on cherche dans la liste d'images l'image à l'ID correspondant
+    for (let i=0; i<tab.length; i++){   
         if (tab[i]['id'] === id_img){
             image = tab[i];
             break;
